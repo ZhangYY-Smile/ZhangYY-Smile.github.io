@@ -4,6 +4,8 @@
     <title>Docker Volume</title>
     <url>/2019/05/22/Docker/Docker%20Volume/</url>
     <content><![CDATA[<p>想要了解Docker Volume，首先我们需要知道Docker的文件系统是如何工作的。</p>
+<a id="more"></a>
+
 <p>Docker镜像是由多个文件系统（只读层）叠加而成。当我们启动一个容器的时候，Docker会加载只读镜像层并在其上（镜像栈顶部）添加一个读写层。如果运行中的容器修改了现有的一个已经存在的文件，那该文件将会从读写层下面的只读层复制到读写层，该文件的只读版本仍然存在，只是已经被读写层中该文件的副本所隐藏。当删除Docker容器，并通过该镜像重新启动时，之前的更改将会丢失。在Docker中，只读层及在顶部的读写层的组合被称为<code>Union File System</code>（联合文件系统）。</p>
 <p>为了能够保存（持久化）数据以及共享容器间的数据，Docker提出了<code>Volume</code>的概念。简单来说，<strong>Volume就是目录或者文件，它可以绕过默认的联合文件系统，而以正常的文件或者目录的形式存在于宿主机上。</strong></p>
 <p>初始化Volume的两种方式：</p>
@@ -88,6 +90,7 @@
     <title>Docker核心组件</title>
     <url>/2019/05/18/Docker/Docker%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/</url>
     <content><![CDATA[<p>Docker中的核心组件为：<code>Image</code> (镜像)、<code>Registry</code> (仓库)、<code>Container</code> (容器)</p>
+<a id="more"></a>
 <h4 id="Image-镜像"><a href="#Image-镜像" class="headerlink" title="Image(镜像)"></a>Image(镜像)</h4><p>镜像是构建Docker世界的基石。是基于联合(Union)文件系统的一种层式结构</p>
 <ul>
 <li>文件和<code>meta data</code>的集合（<code>root filesystem</code>）</li>
@@ -190,6 +193,8 @@
     <title>Dcoker Compose</title>
     <url>/2019/05/22/Docker/Dcoker%20Compose/</url>
     <content><![CDATA[<p>Compose是一个用于定义和运行多容器Docker应用程序的工具。使用Compose，可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，可以从配置中创建并启动所有服务</p>
+<a id="more"></a>
+
 <blockquote>
 <p>通过一个单独的 <code>docker-compose.yml</code> 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）</p>
 </blockquote>
@@ -245,6 +250,8 @@
     <url>/2019/05/21/Docker/Docker%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[<p>Docker的网络模式分为4种</p>
 <p>​    ——在使用<code>docker run</code>创建Docker容器时，可以用<code>--net</code>选项指定容器的网络模式</p>
+<a id="more"></a>
+
 <ul>
 <li><code>Bridge</code>模式：默认模式</li>
 <li><code>Host</code>模式</li>
@@ -296,6 +303,8 @@
     <title>每天一个Linux命令(1):ls命令</title>
     <url>/2019/03/10/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-1-ls%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><code>ls</code>命令是<code>linux</code>下最常用的命令。</p>
+<a id="more"></a>
+
 <ul>
 <li><code>ls</code>命令就是<code>list</code>的缩写</li>
 <li>缺省下<code>ls</code>用来打印出当前目录的清单，如果<code>ls</code>指定其他目录，那么就会显示指定目录里的文件及文件夹清单。</li>
@@ -332,6 +341,8 @@
     <title>每天一个Linux命令-2-cd命令</title>
     <url>/2019/03/18/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-2-cd%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><code>cd </code>命令可以说是<code>Linux</code>中最基本的命令语句，其他的命令语句要进行操作，都是建立在使用<code> cd</code> 命令上的。</p>
+<a id="more"></a>
+
 <p>所以，学习<code>Linux</code> 常用命令，首先就要学好<code>cd</code>命令。</p>
 <h4 id="1-命令格式"><a href="#1-命令格式" class="headerlink" title="1.命令格式"></a>1.命令格式</h4><p><code>cd</code>  [目录名]</p>
 <h4 id="2-命令功能"><a href="#2-命令功能" class="headerlink" title="2.命令功能"></a>2.命令功能</h4><p>切换当前目录至某一个目录</p>
@@ -371,7 +382,7 @@
     <title>每天一个Linux命令-3-pwd命令</title>
     <url>/2019/03/18/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-3-pwd%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><code>pwd</code> 命令来查看”当前工作目录“的完整路径。</p>
-<p> 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。 在不太确定当前位置时，就可以使用<code>pwd</code>来判定当前目录在文件系统内的确切位置。</p>
+<p> 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。 在不太确定当前位置时，就可以使用<code>pwd</code>来判定当前目录在文件系统内的确切位置。<br> <a id="more"></a></p>
 <h4 id="1-命令格式"><a href="#1-命令格式" class="headerlink" title="1.命令格式"></a>1.命令格式</h4><p><code>pwd</code>   [选项]</p>
 <h4 id="2-命令功能"><a href="#2-命令功能" class="headerlink" title="2.命令功能"></a>2.命令功能</h4><p>查看”当前工作目录“的完整路径</p>
 <h4 id="3-常用参数"><a href="#3-常用参数" class="headerlink" title="3.常用参数"></a>3.常用参数</h4><p>一般情况下不带任何参数</p>
@@ -405,6 +416,7 @@
     <title>每天一个Linux命令-5-rm命令</title>
     <url>/2019/04/02/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-5-rm%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><code>rm</code>  命令。该命令的功能为删除一个目录中的一个或多个文件或目录，它也可以将某个目录及其下的所有文件及子目录均删除。对于链接文件，只是删除了链接，原有文件均保持不变。</p>
+<a id="more"></a>
 <p><code>rm </code>是常用的命令，也是一个危险的命令，使用的时候要特别当心，尤其对于新手，否则整个系统就会毁在这个命令（比如在<code>/</code>（根目录）下执行<code>rm * -rf</code>）。所以，我们在执行<code>rm</code>之前最好先确认一下在哪个目录，到底要删除什么东西，操作时保持高度清醒的头脑。</p>
 <h4 id="1-命令格式"><a href="#1-命令格式" class="headerlink" title="1.命令格式"></a>1.命令格式</h4><p><code>rm</code>  [选项]  文件</p>
 <h4 id="2-命令功能"><a href="#2-命令功能" class="headerlink" title="2.命令功能"></a>2.命令功能</h4><p>删除一个目录中的一个或多个文件或目录</p>
@@ -445,6 +457,8 @@
     <url>/2019/03/19/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-4-mkdir%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><code>mkdir</code> 命令用来创建指定的名称的目录</p>
 <p>要求创建目录的用户在当前目录中具有写权限，并且指定的目录名不能是当前目录中已有的目录。</p>
+<a id="more"></a>
+
 <h4 id="1-命令格式"><a href="#1-命令格式" class="headerlink" title="1.命令格式"></a>1.命令格式</h4><p><code>mkdir </code>  [选项]  目录</p>
 <h4 id="2-命令功能"><a href="#2-命令功能" class="headerlink" title="2.命令功能"></a>2.命令功能</h4><p>通过 <code>mkdir</code> 命令可以实现在指定位置创建以 <code>DirName</code>(指定的文件名)命名的文件夹或目录。</p>
 <p>要创建文件夹或目录的用户必须对所创建的文件夹的父文件夹具有写权限。并且，所创建的文件夹(目录)不能与其父目录(即父文件夹)中的文件名重名，即同一个目录下不能有同名的(区分大小写)。 </p>
@@ -479,6 +493,8 @@
     <title>每天一个Linux命令-6-rmdir命令</title>
     <url>/2019/04/03/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-6-rmdir%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><code>rmdir</code> 命令，该命令的功能是删除空目录，一个目录被删除之前必须是空的。删除某目录时也必须具有对父目录的写权限。</p>
+<a id="more"></a>
+
 <p>注意，<code>rm -r dir</code>命令可代替<code>rmdir</code>，但是有很大危险性。</p>
 <h4 id="1-命令格式"><a href="#1-命令格式" class="headerlink" title="1.命令格式"></a>1.命令格式</h4><p>rmdir  [选项]  文件</p>
 <h4 id="2-命令功能"><a href="#2-命令功能" class="headerlink" title="2.命令功能"></a>2.命令功能</h4><p>该命令从一个目录中删除一个或多个子目录项，删除某目录时也必须具有对父目录的写权限。</p>
@@ -502,6 +518,8 @@
     <title>每天一个Linux命令-8-cp命令</title>
     <url>/2019/04/04/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-8-cp%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>cp命令用来复制文件或者目录，一般情况下，</p>
+<a id="more"></a>
+
 <p>shell会设置一个别名，在命令行下复制文件时，如果目标文件已经存在，就会询问是否覆盖，不管你是否使用-i参数。</p>
 <p>但是如果是在shell脚本中执行cp时，没有-i参数时不会询问是否覆盖。这说明命令行和shell脚本的执行方式有些不同。 </p>
 <p>cp命令是Linux系统中最常用的命令之一。</p>
@@ -538,6 +556,8 @@
     <title>每天一个Linux命令-7-mv命令</title>
     <url>/2019/04/03/Linux/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-7-mv%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><code>mv</code> 命令是<code>move</code>的缩写，可以用来移动文件或者将文件改名（<code>move (rename) files</code>），</p>
+<a id="more"></a>
+
 <p>是<code>Linux</code>系统下常用的命令，经常用来备份文件或者目录。</p>
 <h4 id="1-命令格式"><a href="#1-命令格式" class="headerlink" title="1.命令格式"></a>1.命令格式</h4><p> <code>mv</code>  [选项]  源文件或目录  目标文件或目录</p>
 <h4 id="2-命令功能"><a href="#2-命令功能" class="headerlink" title="2.命令功能"></a>2.命令功能</h4><p>视<code>mv</code>命令中第二个参数类型的不同（是目标文件还是目标目录），<code>mv</code> 命令将文件重命名或将其移至一个新的目录中。</p>
@@ -716,6 +736,8 @@
     <url>/2019/10/17/Spring/Spring%E4%B8%AD%E7%9A%84InitializingBean%E4%B8%8EDisposableBean/</url>
     <content><![CDATA[<h3 id="InitializingBean"><a href="#InitializingBean" class="headerlink" title="InitializingBean"></a><code>InitializingBean</code></h3><p><code>InitializingBean</code> 接口为bean提供了初始化方法的方式，它只包括<code>afterPropertiesSet</code>方法，</p>
 <p>凡是继承该接口的类，在初始化bean的时候都会执行<code>afterPropertiesSet</code>方法。<code>afterPropertiesSet</code>执行的时间点是所有的<code>properties</code>被注入后</p>
+<a id="more"></a>
+
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> org.springframework.beans.factory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">InitializingBean</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">afterPropertiesSet</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>使用示例：</p>
@@ -1988,6 +2010,9 @@
 <li><p><strong>RESTful</strong>：REST(Representational state transfer)，表述性状态转移，是Roy Fielding在2000年提出的一种架构<strong>风格</strong>、设计<strong>风格</strong>。</p>
 <p>它主要用于客户端和服务器交互类的软件。基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存等机制。</p>
 <p>满足REST**<a href="#REST%E7%9A%84%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6">约束条件</a>**和原则的应用程序或设计就是 RESTful。</p>
+<a id="more"></a>
+
+
 </li>
 </ul>
 <ul>
@@ -2437,7 +2462,9 @@
     <url>/2019/02/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="设计模式总结"><a href="#设计模式总结" class="headerlink" title="设计模式总结"></a>设计模式总结</h3><h4 id="什么是设计模式："><a href="#什么是设计模式：" class="headerlink" title="什么是设计模式："></a>什么是设计模式：</h4><ul>
 <li>某类特定问题的代码设计解决方案</li>
-<li>是一套代码设计的经验总结</li>
+<li>是一套代码设计的经验总结<a id="more"></a>
+
+</li>
 </ul>
 <h4 id="设计模式的作用"><a href="#设计模式的作用" class="headerlink" title="设计模式的作用"></a>设计模式的作用</h4><ul>
 <li>提高代码的复用率，降低开发成本和周期</li>
@@ -3260,6 +3287,8 @@
     <url>/2019/05/14/%E6%8A%80%E6%9C%AF/%E5%AD%97%E7%AC%A6%E9%9B%86%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/JAVA%E4%B8%AD%E7%9A%84%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p><a href="http://zhangyuying.cn/2019/05/14/%E6%8A%80%E6%9C%AF/%E5%AD%97%E7%AC%A6%E9%9B%86/">字符集查看</a></p>
 <p>在平时开发Java的时候，我们会遇到很多编码设置，其中包括：</p>
+<a id="more"></a>
+
 <ul>
 <li><p>Java文件的编码：Java文件的编码表示编写代码的时候，<code>.java</code>文件本身的编码，这个编码的影响在于将你的写的代码源文件复制一份，使用其他编辑器打开，若两个编辑器的默认编码方式不一样，则打开源文件就会变成乱码。一般英文的影响不大，因为大多数编码都兼容<code>ASCII</code>编码，但是中文要是编码不正确，则会乱码。</p>
 <p>IDEA的设置在：Setting-&gt;Editor-&gt;File Encodings中设置</p>
@@ -3420,6 +3449,8 @@
     <title>字符集</title>
     <url>/2019/05/14/%E6%8A%80%E6%9C%AF/%E5%AD%97%E7%AC%A6%E9%9B%86%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/%E5%AD%97%E7%AC%A6%E9%9B%86/</url>
     <content><![CDATA[<p>字符(<code>Character</code>)：各种文字和符号的总称，包括各国家文字、标点符号、图形符号、数字等</p>
+<a id="more"></a>
+
 <p>字符集(<code>Character set</code>)：多个字符的集合</p>
 <ul>
 <li><p>字符集种类较多，每个字符集包含的字符个数不同，常见字符集名称：</p>
@@ -3517,6 +3548,8 @@
     <title>单元测试</title>
     <url>/2019/05/17/%E6%8A%80%E6%9C%AF/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>单元测试（Unit Testing）又称为模块测试，是针对程序模块（程序单元，软件设计的最小单位）来进行正确性检验的测试工作。</p>
+<a id="more"></a>
+
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">即：对软件中的最小可测试单元进行检查和验证</span><br></pre></td></tr></table></figure>
 
 <p>程序单元是应用的最小可测试部件。</p>
@@ -5798,6 +5831,8 @@
     <url>/2019/01/14/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/EffectiveJava(1)-%E8%80%83%E8%99%91%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E4%BB%A3%E6%9B%BF%E6%9E%84%E9%80%A0%E5%99%A8/</url>
     <content><![CDATA[<p>第1条：考虑用静态工厂方法代替构造器</p>
 <p>静态工厂方法对比构造器的优势：</p>
+<a id="more"></a>
+
 <ul>
 <li><p>有名称</p>
 </li>
@@ -6211,6 +6246,8 @@
     <content><![CDATA[<p>第4条：使用私有构造方法实现非实例化</p>
 <p>有时会编写这样的类：只包含一些静态方法和属性，例如：<code>java.lang.Math</code> 、<code>java.util.Arrays</code> 或<code>java.util.Collections</code></p>
 <p>这样的类(<code>utility classes</code>) 不是设计用来被实例化的：因为实例对于这样的类是没有意义的</p>
+<a id="more"></a>
+
 <p>但是编辑器在没有显式构造器的情况下是默认提供了一个公共的、无参的默认构造方法，所以导致可以实例化这个类。</p>
 <p>不过只有当类不包含显式构造方法时，才会生成一个默认构造方法，<strong>因此可以通过设置一个私有构造方法来实现类的非实例化</strong></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Noninstantiable utility class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UtilityClass</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Suppress default constructor for noninstantiability</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">UtilityClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> AssertionError();</span><br><span class="line">    &#125;</span><br><span class="line">    ... <span class="comment">// Remainder omitted</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -6567,6 +6604,8 @@
     <title>JAVA编程思想：二十-注解</title>
     <url>/2019/02/24/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%EF%BC%9A%E4%BA%8C%E5%8D%81-%E6%B3%A8%E8%A7%A3/</url>
     <content><![CDATA[<p>注解(也被称为元数据)，为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便的使用这些数据</p>
+<a id="more"></a>
+
 <p>注解使得我们能够以将由编译器来测试和验证的格式，存储有关程序的额外信息，注解可以用来生成描述符文件，甚至或是新的类定义，并且有助于减轻编写“样板”代码的负担</p>
 <p><code>java SE5</code>内置了三种，定义在<code>java.lang</code>中的注解（标准注解）</p>
 <ul>
@@ -10857,7 +10896,7 @@
 <p>建议首先阅读<a href="http://zhangyuying.cn/2019/11/06/%E6%8A%80%E6%9C%AF/java8%E6%96%B0%E7%89%B9%E6%80%A7/Java8-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E5%BD%92%E7%BA%B3/">Java 8 函数式接口归纳</a></p>
 </blockquote>
 <p>流式编程作为Java 8的亮点之一，是继<code>Java 5</code>之后对集合的再一次升级，可以说<code>Java 8</code>几大特性中，<code>Streams API</code> 是作为Java 函数式的主角来设计的,夸张的说，有了<code>Streams API</code>之后，万物皆可一行代码。</p>
-<!---more-->
+<a id="more"></a>
 
 <h3 id="什么是Stream"><a href="#什么是Stream" class="headerlink" title="什么是Stream"></a>什么是Stream</h3><p><code>Stream</code>被翻译为流，它的工作过程像将一瓶水导入有很多过滤阀的管道一样，水每经过一个过滤阀，便被操作一次，比如过滤，转换等，最后管道的另外一头有一个容器负责接收剩下的水。</p>
 <p>示意图如下：</p>
@@ -11672,6 +11711,8 @@
     <title>JAVA编程思想：十八-Java I/O系统</title>
     <url>/2019/04/17/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%EF%BC%9A%E5%8D%81%E5%85%AB-Java-I-O%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<p>对于程序语言的设计者来说，创建一个好的输入/输出（<code>I/O</code>）系统是一项艰难的任务</p>
+<a id="more"></a>
+
 <h4 id="1-File类"><a href="#1-File类" class="headerlink" title="1.File类"></a>1.File类</h4><p><code>File</code> 既能代表一个特定文件的名称，又能代表一个目录下的一组文件的名称（<code>File</code>是文件和目录路径名的抽象形式）</p>
 <p>简单示例：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fileTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">//创建文件</span></span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;D:/test.txt/&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(!file.exists())&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;不存在&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            file.createNewFile();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// 可以回去文件信息：file.getName()、file.length()、file.isFile()、file.isDirectory() 等等</span></span><br><span class="line">   </span><br><span class="line">	 <span class="comment">// 创建目录</span></span><br><span class="line">     File filedir = <span class="keyword">new</span> File(<span class="string">&quot;D:/test/test&quot;</span>);</span><br><span class="line">     <span class="keyword">if</span>(!filedir.exists())&#123;</span><br><span class="line">         System.out.println(<span class="string">&quot;路径不存在&quot;</span>);</span><br><span class="line">         filedir.mkdirs();</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">//可以获取目录信息：filedir.isDirectory()、filedir.isFile()、filedir.list().length等等</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -12329,6 +12370,42 @@
       </categories>
       <tags>
         <tag>《深入理解Java虚拟机》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>logback基础</title>
+    <url>/2020/11/22/%E6%97%A5%E5%BF%97/logback%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p>本文只做到了对Logback的基本了解，用于日常的使用</p>
+<a id="more"></a>
+
+<p>目录</p>
+<ul>
+<li>日志框架的关系</li>
+<li>日志级别</li>
+<li>Logback配置文件解析</li>
+</ul>
+<h4 id="主流日志框架的关系"><a href="#主流日志框架的关系" class="headerlink" title="主流日志框架的关系"></a>主流日志框架的关系</h4><p>Java中常用的日志框架主要有：Log4j、JDK Logging、LogBack、tinylog等</p>
+<p>SLF4J(<code>Simple Logging Facade for Java</code>)是这些日志框架的抽象层，方便各种日志框架的切换。</p>
+<blockquote>
+<p>Ceki Gülcü首先开发出Log4j并发布，但是并未被纳入到JDK中，之后是JDK发布Logging，后期Ceki Gülcü又开发了Logback，除此之外还有tinylog等可以选择，后为了方便日志框架的切换，Ceki Gülcü又开发出了SLF4J作为日志框架的抽象层</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/zhangyuying-cn/images/master/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6%E5%85%B3%E7%B3%BB.png" alt="日志框架关系图示"></p>
+<h4 id="日志级别"><a href="#日志级别" class="headerlink" title="日志级别"></a>日志级别</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">日志级别排序为： TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR</span><br></pre></td></tr></table></figure>
+
+<h4 id="Logback配置文件解析"><a href="#Logback配置文件解析" class="headerlink" title="Logback配置文件解析"></a>Logback配置文件解析</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">scan：当此属性设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true。</span></span><br><span class="line"><span class="comment">scanPeriod：设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒，当scan为true时，此属性生效。默认的时间间隔为1分钟。</span></span><br><span class="line"><span class="comment">debug：当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">scan</span>=<span class="string">&quot;true&quot;</span> <span class="attr">scanPeriod</span>=<span class="string">&quot;60 seconds&quot;</span> <span class="attr">debug</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 定义日志的根目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;log.path&quot;</span> <span class="attr">value</span>=<span class="string">&quot;/data/demolog&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 定义日志文件名称 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;appName&quot;</span> <span class="attr">value</span>=<span class="string">&quot;demo&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- ch.qos.logback.core.ConsoleAppender 表示控制台输出 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">&quot;stdout&quot;</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.ConsoleAppender&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        日志输出格式：</span></span><br><span class="line"><span class="comment">            %d表示日期时间，</span></span><br><span class="line"><span class="comment">            %thread表示线程名，</span></span><br><span class="line"><span class="comment">            %-5level：级别从左显示5个字符宽度</span></span><br><span class="line"><span class="comment">            %logger&#123;50&#125; 表示logger名字最长50个字符，否则按照句点分割。</span></span><br><span class="line"><span class="comment">            %msg：日志消息，</span></span><br><span class="line"><span class="comment">            %n是换行符</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">layout</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.classic.PatternLayout&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;50&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--ThresholdFilter： 临界值过滤器，过滤掉低于指定临界值的日志。 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.classic.filter.ThresholdFilter&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 在日志配置级别的基础上过滤掉info级别以下的日志 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>info<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- level为 TRACE 和 WARN 日志，时间滚动输出  --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">&quot;TRACE_WARN_FILE&quot;</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 正在记录的日志文档的路径及文档名 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;log.path&#125;/demo_trace.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--日志文档输出格式--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;50&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">charset</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">charset</span>&gt;</span> <span class="comment">&lt;!-- 设置字符集 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 日志记录器的滚动策略，按日期，按大小记录 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 日志归档 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">fileNamePattern</span>&gt;</span>$&#123;log.path&#125;/demo-trace-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">fileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">timeBasedFileNamingAndTriggeringPolicy</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">maxFileSize</span>&gt;</span>100MB<span class="tag">&lt;/<span class="name">maxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">timeBasedFileNamingAndTriggeringPolicy</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--日志文档保留天数--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">maxHistory</span>&gt;</span>15<span class="tag">&lt;/<span class="name">maxHistory</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 此日志文档只记录debug级别的 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.classic.filter.LevelFilter&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 对日志的处理方式：</span></span><br><span class="line"><span class="comment">                   DENY：日志将立即被抛弃不再经过其他过滤器；</span></span><br><span class="line"><span class="comment">                   NEUTRAL：有序列表里的下个过滤器过接着处理日志；（该级别既不处理，也不抛弃，相当于没有任何处理，日志会被保存下来并在本appender被执行</span></span><br><span class="line"><span class="comment">                   ACCEPT：日志会被立即处理，不再经过剩余过滤器。--&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- level：日志级别。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>trace<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- onMatch：对符合过滤级别的日志的操作。（DENY，NEUTRAL，ACCEPT）--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMatch</span>&gt;</span>ACCEPT<span class="tag">&lt;/<span class="name">onMatch</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- onMismatch：对不符合过滤级别的日志的操作。（DENY，NEUTRAL，ACCEPT）--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMismatch</span>&gt;</span>NEUTRAL<span class="tag">&lt;/<span class="name">onMismatch</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.classic.filter.LevelFilter&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>warn<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMatch</span>&gt;</span>ACCEPT<span class="tag">&lt;/<span class="name">onMatch</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMismatch</span>&gt;</span>DENY<span class="tag">&lt;/<span class="name">onMismatch</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- level为 ERROR 日志，时间滚动输出  --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">&quot;ERROR_FILE&quot;</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 正在记录的日志文档的路径及文档名 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;log.path&#125;/demo_error.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--日志文档输出格式--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;50&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">charset</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">charset</span>&gt;</span> <span class="comment">&lt;!-- 此处设置字符集 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 日志记录器的滚动策略，按日期，按大小记录 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">fileNamePattern</span>&gt;</span>$&#123;log.path&#125;/demo-error-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">fileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">timeBasedFileNamingAndTriggeringPolicy</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">maxFileSize</span>&gt;</span>100MB<span class="tag">&lt;/<span class="name">maxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">timeBasedFileNamingAndTriggeringPolicy</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--日志文档保留天数--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">maxHistory</span>&gt;</span>15<span class="tag">&lt;/<span class="name">maxHistory</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 此日志文档只记录ERROR级别的 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.classic.filter.LevelFilter&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>ERROR<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMatch</span>&gt;</span>ACCEPT<span class="tag">&lt;/<span class="name">onMatch</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMismatch</span>&gt;</span>DENY<span class="tag">&lt;/<span class="name">onMismatch</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 没有配置filter，将会打印出全部级别的日志--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">&quot;appLogAppender&quot;</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 指定日志文件的名称 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;log.path&#125;/demo_all.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名</span></span><br><span class="line"><span class="comment">        TimeBasedRollingPolicy： 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责出发滚动。</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">            滚动时产生的文件的存放位置及文件名称 %d&#123;yyyy-MM-dd&#125;：按天进行日志滚动</span></span><br><span class="line"><span class="comment">            %i：当文件大小超过maxFileSize时，按照i进行文件滚动</span></span><br><span class="line"><span class="comment">            --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">fileNamePattern</span>&gt;</span>$&#123;log.path&#125;/$&#123;appName&#125;-%d&#123;yyyy-MM-dd&#125;-%i.log<span class="tag">&lt;/<span class="name">fileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">            可选节点，控制保留的归档文件的最大数量，超出数量就删除旧文件。假设设置每天滚动，</span></span><br><span class="line"><span class="comment">            且maxHistory是365，则只保存最近365天的文件，删除之前的旧文件。注意，删除旧文件是，</span></span><br><span class="line"><span class="comment">            那些为了归档而创建的目录也会被删除。</span></span><br><span class="line"><span class="comment">            --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxHistory</span>&gt;</span>10<span class="tag">&lt;/<span class="name">MaxHistory</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">            当日志文件超过maxFileSize指定的大小是，根据上面提到的%i进行日志文件滚动 注意此处配置SizeBasedTriggeringPolicy是无法实现按文件大小进行滚动的，必须配置timeBasedFileNamingAndTriggeringPolicy</span></span><br><span class="line"><span class="comment">            --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">timeBasedFileNamingAndTriggeringPolicy</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">maxFileSize</span>&gt;</span>100MB<span class="tag">&lt;/<span class="name">maxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">timeBasedFileNamingAndTriggeringPolicy</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 日志输出格式： --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">layout</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.classic.PatternLayout&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; [ %thread ] - [ %-5level ] [ %logger&#123;50&#125; : %line ] - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        logger主要用于存放日志对象，也可以定义日志类型、级别</span></span><br><span class="line"><span class="comment">        name：表示匹配的logger类型前缀，也就是包的前半部分</span></span><br><span class="line"><span class="comment">        level：要记录的日志级别，包括 TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR</span></span><br><span class="line"><span class="comment">        additivity：作用在于children-logger是否使用 rootLogger配置的appender进行输出，</span></span><br><span class="line"><span class="comment">        false：表示只用当前logger的appender-ref，true：</span></span><br><span class="line"><span class="comment">        表示当前logger的appender-ref和rootLogger的appender-ref都有效</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- hibernate logger --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">&quot;cn.zhangyuying.demo.demo.log&quot;</span> <span class="attr">level</span>=<span class="string">&quot;trace&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">&quot;cn.zhangyuying.demo.demo.log2&quot;</span> <span class="attr">level</span>=<span class="string">&quot;warn&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Spring framework logger --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">&quot;org.springframework&quot;</span> <span class="attr">level</span>=<span class="string">&quot;error&quot;</span> <span class="attr">additivity</span>=<span class="string">&quot;false&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">logger</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    root与logger是父子关系，没有特别定义则默认为root，任何一个类只会和一个logger对应，</span></span><br><span class="line"><span class="comment">    要么是定义的logger，要么是root，判断的关键在于找到这个logger，然后判断这个logger的appender和level。</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">&quot;debug&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">&quot;stdout&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">&quot;appLogAppender&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">&quot;TRACE_WARN_FILE&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">&quot;ERROR_FILE&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考文件：<br><a href="https://www.cnblogs.com/suger43894/p/9543685.html">各种日志框架的关系</a></p>
+<p><a href="https://www.jianshu.com/p/6f093b0b0c8a">Logback配置解析</a></p>
+<p><a href="https://blog.csdn.net/xu_san_duo/article/details/80364600">Logback配置解析</a></p>
+<p><a href="https://www.cnblogs.com/whalesea/p/10950628.html">日志级别的配置</a></p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>Logback</tag>
       </tags>
   </entry>
 </search>

@@ -200,6 +200,78 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="">
+    <link itemprop="mainEntityOfPage" href="http://zhangyuying.cn/2019/06/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%EF%BC%9A%E5%8D%81%E4%B8%83-%E5%AE%B9%E5%99%A8%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张玉莹">
+      <meta itemprop="description" content="路漫漫其修远兮 吾将上下而求索">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张玉莹的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/06/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%EF%BC%9A%E5%8D%81%E4%B8%83-%E5%AE%B9%E5%99%A8%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/" class="post-title-link" itemprop="url">JAVA编程思想：十七-容器深入研究</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-18 18:01:51" itemprop="dateCreated datePublished" datetime="2019-06-18T18:01:51+08:00">2019-06-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>java集合类库：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%EF%BC%9A%E5%8D%81%E4%B8%83-%E5%AE%B9%E5%99%A8%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="">
     <link itemprop="mainEntityOfPage" href="http://zhangyuying.cn/2019/05/22/Docker/Dcoker%20Compose/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -231,7 +303,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:40:52" itemprop="dateModified" datetime="2020-11-26T11:40:52+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,49 +327,14 @@
 
       
           <p>Compose是一个用于定义和运行多容器Docker应用程序的工具。使用Compose，可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，可以从配置中创建并启动所有服务</p>
-<blockquote>
-<p>通过一个单独的 <code>docker-compose.yml</code> 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）</p>
-</blockquote>
-<p><code>Compose</code> 项目由 Python 编写，实现上调用了 Docker 服务提供的 API 来对容器进行管理。因此，只要所操作的平台支持 Docker API，就可以在其上利用 <code>Compose</code> 来进行编排管理。</p>
-<p>使用Compose基本上是一个三步过程：</p>
-<ol>
-<li><code>Dockerfile</code> 定义应用的运行环境</li>
-<li><code>docker-compose.yml</code>  定义组成应用的各服务（在隔离环境一起运行）</li>
-<li><code>docker-compose up</code> 启动整个应用</li>
-</ol>
-<p>compse 相关的常用命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">运行compose项目[在后台运行]</span><br><span class="line">docker-compose up [-d]</span><br><span class="line">停止 up 命令所启动的容器，并移除网络</span><br><span class="line">docker-compose down</span><br><span class="line">列出 Compose 文件中包含的镜像。</span><br><span class="line">docker-compose images</span><br><span class="line">列出项目中目前的所有容器[指定容器]</span><br><span class="line">docker-compose ps [$&#123;server name&#125;]</span><br><span class="line">查看docker-compose运行的容器日志[指定容器]</span><br><span class="line">docker-compose logs [$&#123;server name&#125;]</span><br><span class="line"></span><br><span class="line">设置指定服务运行的容器个数（服务名称&#x3D;数量）</span><br><span class="line">docker-compose scale web&#x3D;3 db&#x3D;2 $&#123;server name &#x3D; num&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>Compose</code> 面向项目进行管理。可以说在Compose中最重要的就是<code>docker-compose.yml</code>的编写</p>
-<p>docker-compose.yml 中有3大块：</p>
-<ul>
-<li><code>services</code>：一个service代表一个container，这个container可以从dockerhub的image来创建，或者从本地的Dockerfile build出来的image来创建，service的启动类似于docker run，可以指定network和volume </li>
-<li><code>networks</code>：service代表的所属的网络</li>
-<li><code>volumes</code>：数据卷</li>
-</ul>
-<h4 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h4><p>1.使用Compose启动一个python程序（统一文件夹，有以下3个文件）</p>
-<p>(1)docker-compose.yml:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  redis:</span><br><span class="line">    image: redis</span><br><span class="line"></span><br><span class="line">  web:</span><br><span class="line">    build:</span><br><span class="line">      context: .</span><br><span class="line">      dockerfile: Dockerfile</span><br><span class="line">    ports:</span><br><span class="line">       - 80:5000</span><br><span class="line">    environment:</span><br><span class="line">      REDIS_HOST: redis</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p> build说明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">build:</span><br><span class="line">     context: .</span><br><span class="line">     dockerfile: Dockerfile</span><br><span class="line">    也可缩写为</span><br><span class="line">   build: .    </span><br></pre></td></tr></table></figure>
-
-<p>(2).Dockerfile</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM python:2.7</span><br><span class="line">LABEL maintaner&#x3D;&quot;zyy&quot;</span><br><span class="line">COPY . &#x2F;app</span><br><span class="line">WORKDIR &#x2F;app</span><br><span class="line">RUN pip install flask redis</span><br><span class="line">EXPOSE 5000</span><br><span class="line">CMD [ &quot;python&quot;, &quot;app.py&quot; ]</span><br></pre></td></tr></table></figure>
-
-<p>(3).app.py</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask</span><br><span class="line">from redis import Redis</span><br><span class="line">import os</span><br><span class="line">import socket</span><br><span class="line"></span><br><span class="line">app &#x3D; Flask(__name__)</span><br><span class="line">redis &#x3D; Redis(host&#x3D;os.environ.get(&#39;REDIS_HOST&#39;,&#39;127.0.0.1&#39;), port&#x3D;6379)</span><br><span class="line"></span><br><span class="line">@app.route(&#39;&#x2F;&#39;)</span><br><span class="line">def hello():</span><br><span class="line">  redis.incr(&#39;hits&#39;)</span><br><span class="line">  return &#39;Hello Container World! zyy come here %s times&#39; % redis.get(&#39;hits&#39;)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">  app.run(host&#x3D;&quot;0.0.0.0&quot;, port&#x3D;5000, debug&#x3D;True)</span><br></pre></td></tr></table></figure>
-
-<p>2.运行wordpress的docker-compose.yml文件(作为语法参考)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">version: &#39;3&#39;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">    wordpress:</span><br><span class="line">        image: wordpress</span><br><span class="line">        ports:</span><br><span class="line">            - 8080:80</span><br><span class="line">        environment:</span><br><span class="line">            WORDPRESS_DB_HOST: mysql</span><br><span class="line">            WORDPRESS_DB_PASSWORD: root</span><br><span class="line">        networks:</span><br><span class="line">            - my-bridge</span><br><span class="line">            </span><br><span class="line">    mysql:</span><br><span class="line">        image: mysql</span><br><span class="line">        environment:</span><br><span class="line">            MYSQL_ROOT_PASSWORD: root</span><br><span class="line">            MYSQL_DATABASE: wordpress</span><br><span class="line">        volumes:</span><br><span class="line">            - mysql-data:&#x2F;var&#x2F;lib&#x2F;mysql</span><br><span class="line">        networks:</span><br><span class="line">            - my-bridge</span><br><span class="line">            </span><br><span class="line">volumes:</span><br><span class="line">    mysql-data:</span><br><span class="line">    </span><br><span class="line">networks:</span><br><span class="line">    my-bridge:</span><br><span class="line">        driver: bridge</span><br></pre></td></tr></table></figure>
-
-<h4 id="问题解决："><a href="#问题解决：" class="headerlink" title="问题解决："></a>问题解决：</h4><p><code>docker-compose  up</code> 执行之后，运行的项目被修改之后 镜像不会被重新构建，此时解决方式：</p>
-<p>需要删除镜像之后在<code>docker-compose up</code></p>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="http://landcareweb.com/questions/2645/ru-he-rang-docker-composeshi-zhong-cong-xin-tu-xiang-zhong-xin-chuang-jian-rong-qi">http://landcareweb.com/questions/2645/ru-he-rang-docker-composeshi-zhong-cong-xin-tu-xiang-zhong-xin-chuang-jian-rong-qi</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ee900222/p/docker_5.html">https://www.cnblogs.com/ee900222/p/docker_5.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/658911a8cff3">https://www.jianshu.com/p/658911a8cff3</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/22/Docker/Dcoker%20Compose/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -347,7 +384,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:41:15" itemprop="dateModified" datetime="2020-11-26T11:41:15+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -371,56 +408,14 @@
 
       
           <p>想要了解Docker Volume，首先我们需要知道Docker的文件系统是如何工作的。</p>
-<p>Docker镜像是由多个文件系统（只读层）叠加而成。当我们启动一个容器的时候，Docker会加载只读镜像层并在其上（镜像栈顶部）添加一个读写层。如果运行中的容器修改了现有的一个已经存在的文件，那该文件将会从读写层下面的只读层复制到读写层，该文件的只读版本仍然存在，只是已经被读写层中该文件的副本所隐藏。当删除Docker容器，并通过该镜像重新启动时，之前的更改将会丢失。在Docker中，只读层及在顶部的读写层的组合被称为<code>Union File System</code>（联合文件系统）。</p>
-<p>为了能够保存（持久化）数据以及共享容器间的数据，Docker提出了<code>Volume</code>的概念。简单来说，<strong>Volume就是目录或者文件，它可以绕过默认的联合文件系统，而以正常的文件或者目录的形式存在于宿主机上。</strong></p>
-<p>初始化Volume的两种方式：</p>
-<ul>
-<li><p>在<code>Dockerfile</code> 中设置数据卷存储地址：</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#此时定义的是匿名卷</span></span><br><span class="line"><span class="keyword">VOLUME</span><span class="bash">  [<span class="string">&quot;/opt/config&quot;</span>] </span></span><br></pre></td></tr></table></figure>
-
-<p>此时设置的就是容器运行时内部挂载的数据卷地址，但是此时运行容器(<code>docker run</code>)不指定-v参数，在主机上生成的<code>volume name</code>最后是一串随机id，不易区分和查看，并且默认存储到主机的<code>/var/lib/docker/volumes/dir</code>下</p>
-</li>
-<li><p><code>docker run</code> 的时候使用<code>-v</code>指定 Volume</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d container-test -h CONTAINER -v &#x2F;data</span><br></pre></td></tr></table></figure>
-
-<p>和Dockerfile中指定是一样的效果<br>将<code>/data</code>挂载到容器中，并绕过联合文件系统，我们可以在主机上直接操作该目录。任何在该镜像<code>/data</code>路径的文件将会被复制到<code>Volume</code>。我们可以使用<code>docker inspect</code>命令找到Volume在主机上的存储位置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect -f &#123;&#123;.Volumes&#125;&#125; container-test</span><br></pre></td></tr></table></figure>
-
-<p>你会看到类似的输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map[&#x2F;data:&#x2F;var&#x2F;lib&#x2F;docker&#x2F;volumes&#x2F;dir&#x2F;cde167197ccc3e138a14f1a4f...b32cec92e79059437a9] </span><br></pre></td></tr></table></figure>
-
-<p>这说明Docker默认是把在<code>/var/lib/docker/volumes/dir</code>下的某个目录挂载到了容器内的<code>/data</code>目录下。</p>
-<p>此时要修改Volume在主机的存储路径,可使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v &#x2F;home&#x2F;localdata:&#x2F;data</span><br></pre></td></tr></table></figure>
-
-<p>该命令将挂载主机的<code>/home/localdata</code>目录到容器内的<code>/data</code>目录上。即是在运行时指定本地目录与容器中目录的<strong>一一对应关系</strong>(改变一个另一个立即跟着改变，保证两边一致)</p>
-<p>这对于在主机和容器之间共享文件是非常有帮助的，例如挂载需要编译的源代码。</p>
-<p>为了保证可移植性（并不是所有的系统的主机目录都是可以用的），挂载主机目录不需要从Dockerfile指定。当使用<code>-v</code>参数时，镜像目录下的任何文件都不会被复制到Volume中。（Volume会复制到镜像目录，镜像不会复制到卷）</p>
-<ul>
-<li><p><code>-v</code> 参数还有一个功能是设置别名：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v log-data:&#x2F;var&#x2F;lib&#x2F;data</span><br></pre></td></tr></table></figure>
-
-<p>将当前运行的容器的持久化存储在主机的数据卷名称命名为<code>log-data</code>（<code>/var/lib/docker/volumes/dir</code>目录下）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="数据共享"><a href="#数据共享" class="headerlink" title="数据共享"></a>数据共享</h4><p>如果要授权一个容器访问另一个容器的Volume，我们可以使用<code>-volumes-from</code>参数来执行<code>docker run</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it -h NEWCONTAINER --volumes-from container-test debian &#x2F;bin&#x2F;bash</span><br><span class="line">root@NEWCONTAINER:&#x2F;# ls &#x2F;data</span><br><span class="line">test-file</span><br><span class="line">root@NEWCONTAINER:&#x2F;#</span><br></pre></td></tr></table></figure>
-
-<p>值得注意的是不管<code>container-test</code>是否运行，它都会起作用。只要有容器连接Volume，它就不会被删除。</p>
-<h4 id="删除Volumes"><a href="#删除Volumes" class="headerlink" title="删除Volumes"></a>删除Volumes</h4><p>这个功能可能会更加重要，如果你已经使用<code>docker rm</code>来删除你的容器，那可能有很多的孤立的Volume仍在占用着空间。</p>
-<p>Volume只有在下列情况下才能被删除：</p>
-<ul>
-<li>该容器是用<code>docker rm －v</code>命令来删除的（<code>-v</code>是必不可少的）。</li>
-<li><code>docker run</code>中使用了<code>--rm</code>参数</li>
-</ul>
-<p>即使用以上两种命令，也只能删除没有容器连接的Volume。连接到用户指定主机目录的Volume永远不会被docker删除。</p>
-<p>除非你已经很小心的，总是像这样来运行容器，否则你将会在<code>/var/lib/docker/volumes/dir</code>目录下得到一些僵尸文件和目录，并且还不容易说出它们到底代表什么。</p>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="http://dockone.io/article/128">http://dockone.io/article/128</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.51cto.com/ityouknow/2088142">https://blog.51cto.com/ityouknow/2088142</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/22/Docker/Docker%20Volume/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -470,7 +465,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:41:42" itemprop="dateModified" datetime="2020-11-26T11:41:42+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -495,46 +490,14 @@
       
           <p>Docker的网络模式分为4种</p>
 <p>​    ——在使用<code>docker run</code>创建Docker容器时，可以用<code>--net</code>选项指定容器的网络模式</p>
-<ul>
-<li><code>Bridge</code>模式：默认模式</li>
-<li><code>Host</code>模式</li>
-<li><code>None</code>模式</li>
-<li><code>Container</code>模式</li>
-</ul>
-<h4 id="Bridge模式"><a href="#Bridge模式" class="headerlink" title="Bridge模式"></a>Bridge模式</h4><p>当Docker进程启动时，会在主机上创建一个名为<code>docker0</code>的虚拟网桥，此主机上启动的Docker容器会连接到这个虚拟网桥上。</p>
-<p>从<code>docker0</code>子网中分配一个IP给容器使用，并设置<code>docker0</code>的IP地址为容器的默认网关。在主机上创建一对虚拟网卡<code>veth pair</code>设备，Docker将<code>veth pair</code>设备的一端放在新创建的容器中，并命名为<code>eth0</code>（容器的网卡），另一端放在主机中，以<code>vethxxx</code>这样类似的名字命名，并将这个网络设备加入到<code>docker0</code>网桥中。可以通过**<code>brctl show</code>**命令查看。</p>
-<p>使用<code>docker run -p</code>时，docker实际是在<code>iptables</code>做了<code>DNAT</code>规则，实现端口转发功能。可以使用**<code>iptables -t nat -vnL</code>**查看。</p>
-<p><code>bridge</code>模式是docker的默认网络模式，不写<code>--net</code>参数，就是<code>bridge</code>模式。</p>
-<p>使用示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --net&#x3D;bridge --name docker_demo1 ubuntu-base:v3</span><br></pre></td></tr></table></figure>
-
-<p>bridge模式如下图所示：</p>
-<p><img src="https://raw.githubusercontent.com/zhangyuying-cn/images/master/Docker/net-bridge.png" alt="bridage模式"></p>
-<h4 id="Host"><a href="#Host" class="headerlink" title="Host"></a>Host</h4><p>Docker使用了Linux的Namespaces技术来进行资源隔离，如PID Namespace隔离进程，Mount Namespace隔离文件系统，Network Namespace隔离网络等。</p>
-<p>但是如果启动容器的时候使用<code>host</code>模式，那么这个容器将不会获得一个独立的Network Namespace，而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口。但是，容器的其他方面，如文件系统、进程列表等还是和宿主机隔离的。</p>
-<p>例如，我们在10.10.101.105/24的机器上用host模式启动一个含有web应用的Docker容器，监听tcp80端口。当我们在容器中执行任何类似<code>ifconfig</code>命令查看网络环境时，看到的都是宿主机上的信息。而外界访问容器中的应用，则直接使用10.10.101.105:80即可，不用任何NAT转换，就如直接跑在宿主机中一样。</p>
-<p>使用示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --net&#x3D;host --name docker_demo2 ubuntu-base:v3</span><br></pre></td></tr></table></figure>
-
-<p>host模式如下图所示：</p>
-<p><img src="https://raw.githubusercontent.com/zhangyuying-cn/images/master/Docker/net-host.png" alt="host模式"></p>
-<h4 id="None"><a href="#None" class="headerlink" title="None"></a>None</h4><p>使用none模式，Docker容器拥有自己的Network Namespace，但是，并不为Docker容器进行任何网络配置。也就是说，这个Docker容器没有网卡、IP、路由等信息。需要我们自己为Docker容器添加网卡、配置IP等。</p>
-<p>使用示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -tid --net&#x3D;none --name docker_demo3 ubuntu-base:v3</span><br></pre></td></tr></table></figure>
-
-<p>none模式如下图所示：</p>
-<p><img src="https://raw.githubusercontent.com/zhangyuying-cn/images/master/Docker/net-none.png" alt="none模式"></p>
-<h4 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h4><p>这个模式指定新创建的容器和已经存在的一个容器共享一个 Network Namespace，而不是和宿主机共享。新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。同样，两个容器除了网络方面，其他的如文件系统、进程列表等还是隔离的。两个容器的进程可以通过 lo 网卡设备通信。</p>
-<p>使用示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -tid --net&#x3D;container:docker_demo1 --name docker_demo5 ubuntu-base:v3</span><br></pre></td></tr></table></figure>
-
-<p>container模式如下图所示：</p>
-<p><img src="https://raw.githubusercontent.com/zhangyuying-cn/images/master/Docker/net-container.png" alt="container模式"></p>
-<h3 id="跨主机通信"><a href="#跨主机通信" class="headerlink" title="跨主机通信"></a>跨主机通信</h3><p>Docker默认的网络环境下，单台主机上的Docker容器可以通过<code>docker0</code>网桥直接通信，而不同主机上的Docker容器之间只能通过在主机上做端口映射进行通信。这种端口映射方式对很多集群应用来说极不方便。如果能让Docker容器之间直接使用自己的IP地址进行通信，会解决很多问题。按实现原理可分别直接路由方式、桥接方式（如<em>pipework</em>）、<code>Overlay</code>隧道方式（如<em>flannel</em>、<em>ovs+gre</em>）等。</p>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yy-cxd/p/6553624.html">https://www.cnblogs.com/yy-cxd/p/6553624.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gispathfinder/p/5871043.html">https://www.cnblogs.com/gispathfinder/p/5871043.html</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/21/Docker/Docker%E7%BD%91%E7%BB%9C/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -665,7 +628,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:42:05" itemprop="dateModified" datetime="2020-11-26T11:42:05+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -689,46 +652,14 @@
 
       
           <p>Docker中的核心组件为：<code>Image</code> (镜像)、<code>Registry</code> (仓库)、<code>Container</code> (容器)</p>
-<h4 id="Image-镜像"><a href="#Image-镜像" class="headerlink" title="Image(镜像)"></a>Image(镜像)</h4><p>镜像是构建Docker世界的基石。是基于联合(Union)文件系统的一种层式结构</p>
-<ul>
-<li>文件和<code>meta data</code>的集合（<code>root filesystem</code>）</li>
-<li>分层的，并且每一层都可以添加改变删除文件，成为一个新的<code>image</code></li>
-<li>不同的<code>image</code>可以共享相同的<code>layer</code></li>
-<li><code>Image</code>本身是<code>read-only</code>的</li>
-</ul>
-<p>获取镜像的方式：</p>
-<ul>
-<li>从docker仓库拉取(开源docker仓库：<a target="_blank" rel="noopener" href="https://hub.docker.com/">docker hub</a> )</li>
-<li>编写DockerFile生成(<a href="http://zhangyuying.cn/2019/05/20/Docker/DockerFile/">DockerFile语法梳理及示例</a>)</li>
-</ul>
-<p>image 相关的常用命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">获取镜像</span><br><span class="line">docker pull $&#123;image name : image tag&#125;</span><br><span class="line">查看全部镜像</span><br><span class="line">docker image ls</span><br><span class="line">创建镜像</span><br><span class="line">docker build -t $&#123;image name&#125; .</span><br><span class="line">查看镜像历史</span><br><span class="line">docker history $&#123;image id&#125;</span><br><span class="line">运行镜像[在后台运行]</span><br><span class="line">docker run [-d] $&#123;image name&#125;</span><br><span class="line">删除镜像</span><br><span class="line">docker image rm $&#123;image id&#125; 或 docker rmi $&#123;image id&#125;</span><br><span class="line"></span><br><span class="line">示例：</span><br><span class="line">1.拉取一个nginx后，启动镜像：-v 映射数据卷 -p 映射端口</span><br><span class="line"> docker run -v &#x2F;usr&#x2F;local&#x2F;nginx:&#x2F;etc&#x2F;nginx&#x2F;conf.d -p 80:80 -d nginx</span><br><span class="line">2.拉取一个mysql后，启动镜像：</span><br><span class="line"> docker run -d --name myMysql -v &#x2F;data&#x2F;mysql:&#x2F;var&#x2F;lib&#x2F;mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD&#x3D;root mysql</span><br></pre></td></tr></table></figure>
-
-<p>操作系统的镜像只有<code>rootfs</code>，还是依赖操作系统的</p>
-<h4 id="Registry-仓库"><a href="#Registry-仓库" class="headerlink" title="Registry(仓库)"></a>Registry(仓库)</h4><p>保存镜像的仓库，分为</p>
-<ul>
-<li><p>公共：<a target="_blank" rel="noopener" href="https://hub.docker.com/">docker hub</a></p>
-</li>
-<li><p>私有：自己创建，官方提供了 registry 镜像来启动本地的私有仓库。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -v &#x2F;opt&#x2F;registry:&#x2F;var&#x2F;lib&#x2F;registry -p 5000:5000 --restart&#x3D;always registry:2.5.0</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="Container-容器"><a href="#Container-容器" class="headerlink" title="Container(容器)"></a>Container(容器)</h4><p>容器是基于镜像启动的，容器中可以运行一个或多个进程。可以理解为：镜像是Docker生命周期的构建或打包阶段，而容器是启动或执行阶段</p>
-<ul>
-<li>通过<code>Image</code>创建（<code>copy</code>）</li>
-<li>在<code>Image layer</code>之上建立一个<code>container layer</code>（可读写）</li>
-<li>类比面向对象：镜像和容器相当于类和示例</li>
-<li><code>Image</code>负责<code>app</code>的存储和分发，<code>Container</code>负责运行<code>app</code></li>
-</ul>
-<p>Container相关的常用命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">查看全部容器</span><br><span class="line">docker container ls [-a]</span><br><span class="line">删除容器</span><br><span class="line">docker container rm $&#123;container id&#125; 或 docker rm $&#123;container id&#125;</span><br><span class="line">使用容器生成镜像（不推荐）</span><br><span class="line">docker container commit </span><br><span class="line">进入容器</span><br><span class="line">docker exec -it $&#123;container id&#125; &#x2F;bin&#x2F;sh</span><br><span class="line">停止当前容器</span><br><span class="line">docker container stop $&#123;container id&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考资料</p>
-<p>《第一本Docker书》</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/18/Docker/Docker%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -862,7 +793,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:42:37" itemprop="dateModified" datetime="2020-11-26T11:42:37+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -886,51 +817,14 @@
 
       
           <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>单元测试（Unit Testing）又称为模块测试，是针对程序模块（程序单元，软件设计的最小单位）来进行正确性检验的测试工作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">即：对软件中的最小可测试单元进行检查和验证</span><br></pre></td></tr></table></figure>
-
-<p>程序单元是应用的最小可测试部件。</p>
-<ul>
-<li>在过程化编程中，一个单元就是单个程序、函数、过程等；</li>
-<li>对于面向对象编程，最小单元就是方法，包括基类（超类）、抽象类、或者派生类（子类）中的方法。</li>
-</ul>
-<h4 id="为什么要有单元测试"><a href="#为什么要有单元测试" class="headerlink" title="为什么要有单元测试"></a>为什么要有单元测试</h4><p>实际工作中我们为什么需要单元测试，主要有以下几点：</p>
-<ul>
-<li>发布周期缩短，传统测试不满足需要</li>
-<li>软件提测质量差，债务积累太多</li>
-<li>代码修改内容影响范围不可掌控</li>
-</ul>
-<h4 id="单元测试的好处"><a href="#单元测试的好处" class="headerlink" title="单元测试的好处"></a>单元测试的好处</h4><p>单元测试的目标是隔离程序部件并证明这些单个部件是正确的。</p>
-<p>一个单元测试提供了代码片断需要满足的严密的书面规约。因此， 单元测试在软件开发过程的早期就能发现问题。</p>
-<ul>
-<li><p>适应变更</p>
-<p>单元测试允许程序员在未来重构代码，并且确保模块依然工作正确</p>
-</li>
-<li><p>简化集成</p>
-<p>单元测试消除程序单元的不可靠，采用自底向上的测试路径。通过先测试程序部件再测试部件组装，使集成测试变得更加简单。</p>
-</li>
-<li><p>文档记录</p>
-<p>单元测试提供了系统的一种文档记录。借助于查看单元测试提供的功能和单元测试中如何使用程序单元，开发人员可以直观的理解程序单元的基础API。</p>
-</li>
-<li><p>表达设计</p>
-<p>在测试驱动开发的软件实践中，单元测试可以取代正式的设计。每一个单元测试案例均可以视为一项类、方法和待观察行为等设计元素。</p>
-</li>
-</ul>
-<h4 id="单元测试框架"><a href="#单元测试框架" class="headerlink" title="单元测试框架"></a>单元测试框架</h4><p>单元测试框架通常是没有作为编译器包的第三方产品。他们帮助简化单元测试的过程，并且已经为各种编程语言开发</p>
-<p>java中现常用的单元测试框架包括：</p>
-<ul>
-<li><p>JUnit</p>
-</li>
-<li><p><a href="http://zhangyuying.cn/2018/08/15/%E6%8A%80%E6%9C%AF/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-Mocktio/">Mockito</a></p>
-</li>
-<li><p>TestNG</p>
-</li>
-<li><p>….</p>
-<p>​</p>
-</li>
-</ul>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95">https://zh.wikipedia.org/wiki/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/17/%E6%8A%80%E6%9C%AF/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -980,7 +874,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:43:22" itemprop="dateModified" datetime="2020-11-26T11:43:22+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1007,106 +901,14 @@
 <li><p><strong>RESTful</strong>：REST(Representational state transfer)，表述性状态转移，是Roy Fielding在2000年提出的一种架构<strong>风格</strong>、设计<strong>风格</strong>。</p>
 <p>它主要用于客户端和服务器交互类的软件。基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存等机制。</p>
 <p>满足REST**<a href="#REST%E7%9A%84%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6">约束条件</a>**和原则的应用程序或设计就是 RESTful。</p>
-</li>
-</ul>
-<ul>
-<li><p><strong>HATEOAS</strong> : 全称是Hypertext As The Engine Of Application State，是REST架构的一种约束，通过在返回值中带有操作资源的链接信息，进一步将客户端和服务器解耦。</p>
-<blockquote>
-<p>中文翻译为“将超媒体格式作为应用状态的引擎”，核心思想就是每个资源都有它的状态，不同状态下，可对它进行的操作不一样。理解了这一层，再来看看REST的全称，Representational State Transfer，中文翻译为“表述性状态转移”，是不是好理解多了？</p>
-</blockquote>
-</li>
-<li><p><strong>Richardson成熟度模型</strong> : 根据REST的约束对API进行评级的一种方法，分为四级（Level0到Level3）</p>
-<p><img src="https://raw.githubusercontent.com/zhangyuying-cn/images/master/%E6%8A%80%E6%9C%AF/RESTful/RichardsonMaturityModel.jpg" alt="RichardsonMaturityModel"></p>
-<ul>
-<li>Level 0 : 仅将HTTP（或其它协议）当成传输方式，实际上只是RPC的一种方式，没有资源的概念。</li>
-<li>Level 1 : 引入了<strong>资源</strong>的概念，不过通常只用到GET或POST，而且可能将二者等价使用。</li>
-<li>Level 2 : 使用HTTP的方法（POST , DELETE , PUT , GET）来代表资源的增删改查，并使用HTTP状态码来代表不同的结果。</li>
-<li>Level 3 : 使用HATEOAS方式，在资源的返回值中包含操作资源的链接信息。</li>
-</ul>
-<p><strong>这个模型并不是一种规范，只是用来理解Restful的工具</strong></p>
-</li>
-</ul>
-<h4 id="REST的约束条件"><a href="#REST的约束条件" class="headerlink" title="REST的约束条件"></a>REST的约束条件</h4><p>REST架构风格最重要的架构约束有6个：</p>
-<ul>
-<li><p>客户端-服务器（Client-Server）</p>
-<p>客户端-服务器结构约束的目的是将客户端和服务器端的关注点分离. 将用户界面所关注的逻辑和数据存储所关注的逻辑分离开来有助于提高用户界面的跨平台的可移植性.通过简化服务器模块也有助于服务器模块的可扩展性.</p>
-</li>
-</ul>
-<ul>
-<li><p>无状态（Stateless）</p>
-<p>服务器不能保存客户端的信息, 每一次从客户端发送的请求中, 要包含所有的必须的状态信息, 会话信息由客户端保存, 服务器端根据这些状态信息来处理请求. 服务器可以将会话状态信息传递给其他服务, 比如数据库服务, 这样可以保持一段时间的状态信息, 从而实现认证功能. 当客户端可以切换到一个新状态的时候发送请求信息. 当一个或者多个请求被发送之后, 客户端就处于一个状态变迁过程中. 每一个应用的状态描述可以被客户端用来初始化下一次的状态变迁.</p>
-</li>
-</ul>
-<ul>
-<li><p>缓存（Cacheability）</p>
-<p>如同万维网一样, 客户端和中间的通讯传递者可以将响应缓存起来. 响应必须明确的或者间接的表明本身是否可以进行缓存,这可以预防客户端在将来进行请求的时候得到陈旧的或者不恰当的数据. 管理良好的缓存机制可以 减少客户端-服务器之间的交互, 甚至完全避免客户端-服务器交互, 这进一步提了高性能和可扩展性。</p>
-</li>
-</ul>
-<ul>
-<li><p>统一接口（Uniform Interface）</p>
-<p>统一接口是 RESTful 系统设计的基本出发点. 它基于资源, 简化了系统的架构, 减少了耦合性, 可以让所有模块各自独立的进行改进. 对于统一接口的四个约束是:</p>
-</li>
-</ul>
-<ul>
-<li><p>请求中包含资源的 ID (Resource identification in requests )</p>
-<p>请求中包含了各种<strong>独立资源</strong>的标识, 例如, 在 Web 服务中的 URIs. 资源本身和发送给客户端的标识是独立. 例如, 服务器可以将自身的数据库信息以 HTML XML 或者 JSON 的方式发送给客户端, 但是这些可能都不是服务器的内部记录方式.</p>
-</li>
-<li><p>资源通过标识来操作(Resource manipulation through representations)</p>
-<p>当客户端拥有一个资源的标识, 包括附带的元数据, 则它就有足够的信息来删除这个资源.</p>
-</li>
-<li><p>消息的自我描述性(Self-descriptive messages)</p>
-<p>每一个返回消息都包含足够的信息来描述如何来处理这个信息. 例如, 媒体类型 (midia-type) 就可以确定需要什么样的分析器来分析媒体数据.</p>
-</li>
-<li><p>用超媒体驱动应用状态 ( Hypermedia as the engine of application state (HATEOAS))</p>
-<p>同用户访问 Web 服务器的 Home 页面相似,当一个 REST 客户端访问了最初的 REST 应用的 URI 之后, REST 客户端应该可以使用服务器端提供的链接,动态的发现所有的可用的资源和可执行的操作.随着访问的进行, 服务器在响应中提供文字超链接, 以便客户端可以得到当前可用的操作. 客户端无需用确定的编码的方式记录下服务器端所提供的动态应用的结构信息.</p>
-</li>
-</ul>
-<ul>
-<li><p>分层系统（Layered System）</p>
-<p>客户端一般不知道是否直接连接到了最终的服务器, 或者是路径上的中间服务器. 中间服务器可以通过负载均衡和共享缓存的机制提高系统的可扩展性,这样可也便于安全策略的部署.</p>
-</li>
-<li><p>按需代码（Code-On-Demand，可选）</p>
-<p>服务器可以通过发送可执行代码给客户端的方式临时性的扩展功能或者定制功能.例如Java Applet、Flash或JavaScript。</p>
-<p>​</p>
-</li>
-</ul>
-<h3 id="RESTful最常见应用—web服务"><a href="#RESTful最常见应用—web服务" class="headerlink" title="RESTful最常见应用—web服务"></a>RESTful最常见应用—web服务</h3><p>匹配REST设计风格的Web API称为<strong>RESTful API</strong> ，它从以下三个方面资源进行定义：</p>
-<ul>
-<li>直观简短的资源地址：URI，比如：<code>http://example.com/resources/</code>。</li>
-<li>传输的资源：Web服务接受与返回的互联网媒体类型，比如：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/JSON">JSON</a>，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/XML">XML</a>，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/YAML">YAML</a>等。</li>
-<li>对资源的操作：Web服务在该资源上所支持的一系列<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE#%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95">请求方法</a>（比如：POST，GET，PUT或DELETE）。</li>
-</ul>
-<p>下表列出了在实现RESTful API时HTTP请求方法的典型用途。</p>
-<table>
-<thead>
-<tr>
-<th>资源</th>
-<th>GET</th>
-<th>PUT</th>
-<th>POST</th>
-<th>DELETE</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>一组资源的URI，比如<code>https://example.com/resources/</code></td>
-<td><strong>列出</strong>URI，以及该资源组中每个资源的详细信息（后者可选）。</td>
-<td>使用给定的一组资源<strong>替换</strong>当前整组资源。</td>
-<td>在本组资源中<strong>创建/追加</strong>一个新的资源。该操作往往返回新资源的URL。</td>
-<td><strong>删除</strong>整组资源。</td>
-</tr>
-<tr>
-<td>单个资源的URI，比如<code>https://example.com/resources/142</code></td>
-<td><strong>获取</strong>指定的资源的详细信息，格式可以自选一个合适的网络媒体类型（比如：XML、JSON等）</td>
-<td><strong>替换/创建</strong>指定的资源。并将其追加到相应的资源组中。</td>
-<td>把指定的资源当做一个资源组，并在其下<strong>创建/追加</strong>一个新的元素，使其隶属于当前资源。</td>
-<td><strong>删除</strong>指定的元素。</td>
-</tr>
-</tbody></table>
-<p>PUT(PATCH)和DELETE方法是幂等方法。GET方法是安全方法（不会对服务器端有修改，因此当然也是幂等的）。</p>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/30396391">https://zhuanlan.zhihu.com/p/30396391</a></p>
-<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2">https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/14/%E6%8A%80%E6%9C%AF/RESTful/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1156,7 +958,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:44:04" itemprop="dateModified" datetime="2020-11-26T11:44:04+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1181,206 +983,14 @@
       
           <p><a href="http://zhangyuying.cn/2019/05/14/%E6%8A%80%E6%9C%AF/%E5%AD%97%E7%AC%A6%E9%9B%86/">字符集查看</a></p>
 <p>在平时开发Java的时候，我们会遇到很多编码设置，其中包括：</p>
-<ul>
-<li><p>Java文件的编码：Java文件的编码表示编写代码的时候，<code>.java</code>文件本身的编码，这个编码的影响在于将你的写的代码源文件复制一份，使用其他编辑器打开，若两个编辑器的默认编码方式不一样，则打开源文件就会变成乱码。一般英文的影响不大，因为大多数编码都兼容<code>ASCII</code>编码，但是中文要是编码不正确，则会乱码。</p>
-<p>IDEA的设置在：Setting-&gt;Editor-&gt;File Encodings中设置</p>
-</li>
-<li><p>JVM编码：JVM编码表示JVM在读取<code>String</code>类型的默认编码，可以使用<code>Charset.defaultCharset().name()</code> 获取。可以在JVM启动参数中使用<code>-Dfile.encoding=UTF-8</code>进行设置。</p>
-</li>
-</ul>
-<p>一般需要区分的就是这两种编码。</p>
-<h3 id="1-文件乱码"><a href="#1-文件乱码" class="headerlink" title="1.文件乱码"></a>1.文件乱码</h3><p>一般会出现字符乱码都在于需要与其他程序进行IO的时候。先看看使用字节流进行读取文件的时候：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">  <span class="comment">//&quot;G:\\test.txt&quot; 这个文件是新建的文本文件，输入文字后保存</span></span><br><span class="line">     String path=<span class="string">&quot;G:\\test.txt&quot;</span>;</span><br><span class="line">     <span class="keyword">try</span>(BufferedInputStream inputStream=<span class="keyword">new</span> BufferedInputStream(<span class="keyword">new</span> FileInputStream(path))) &#123;</span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">byte</span> bytes[] = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>]; inputStream.read(bytes) != -<span class="number">1</span>; ) &#123;</span><br><span class="line">             String context = <span class="keyword">new</span> String(bytes);</span><br><span class="line">             System.out.println(context);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">         e.printStackTrace();</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>此时输出是乱码</p>
-<p>首先这里是JVM运行时的编码，因此和JVM的编码设置相关，查看JVM现在的编码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(Charset.defaultCharset().name());</span><br></pre></td></tr></table></figure>
-
-<p>而新建的<code>.txt文件</code>,点击另存为，可以发现默认的编码为<code>ANSI</code>,在简体中文的Windows系统中默认是<code>GBK</code>的编码</p>
-<p>这便是乱码的原因，解决方案有两种</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>设置JVM启动项：-Dfile.encoding=GB2312</span><br><span class="line">  	——tomcat 的日志文件乱码，也可以修改这个配置解决，只不过是修改为-Dfile.encoding=UTF-<span class="number">8</span>(和idea保证一致)，一个原理</span><br><span class="line"><span class="number">2.</span>在编码<span class="keyword">byte</span>数组的时候，指定GB2312编码:String context = <span class="keyword">new</span> String(bytes,<span class="string">&quot;GB2312&quot;</span>);</span><br><span class="line"></span><br><span class="line">这里推荐第二种，毕竟UTF8更加通用</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-网页乱码"><a href="#2-网页乱码" class="headerlink" title="2.网页乱码"></a>2.网页乱码</h3><p>一般来说，浏览器浏览的网页的数据其实是从服务器发送过来的，而发送的数据是通过字节流传输，这个过程就涉及到解码-&gt;编码的过程。</p>
-<p>在HTTP协议中，编码的协议通过<code>Header</code>中的<code>charset</code>中设置。</p>
-<blockquote>
-<p>为什么放header，因为HTTP请求会先解析header，而且header一般不会有ASCII无法解析的字符，一般都是英文</p>
-</blockquote>
-<p>网页乱码其实很好解决，如果发现在Servlet中，返回中文给浏览器的时候浏览器返回的是???</p>
-<p>点击F12，抓包网络后，找到<code>Response Body</code> 中的<code>charset</code>选项，可以发现<code>charset=ISO-8859-1</code></p>
-<p>也就说默认的Tomcat使用的编码是<code>ISO-8859-1</code>，这是西欧的语言编码，它是不兼容中文的。如果你在<code>Servlet</code>返回的结果中添加一点法语：<code>Ä ä</code>或者德语什么的，你会发现会正常显示。</p>
-<p><code>charset</code>的意思便是Tomcat是以什么样的方式编码字节，而浏览器便会以这样的编码方式解码字节。</p>
-<p>我们可以将<code>charset</code>修改为兼容中文的即可，比如<code>UTf-8</code>,<code>GB2312</code>等,建议使用<code>UTF-8</code>，在Servlet中，设置编码的方式为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setCharacterEncoding(&quot;UTF-8&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>也可以如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resp.setContentType(&quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>建议第一种方式(在IDE中一般带有拼写检查)。</p>
-<h3 id="3-IDEA设置编码"><a href="#3-IDEA设置编码" class="headerlink" title="3.IDEA设置编码"></a>3.IDEA设置编码</h3><p>平时编写代码都是使用的IEDA，所以在此说明一下IDEA的编码设置，IDEA默认编码暂时没有找到查找方式，但是我们可以将其指定为<code>UTF-8</code>,找到IDEA的安装路径，在<code>bin</code>目录中可以发现一个名为<code>idea.exe.vmoptions</code>和<code>idea64.exe.vmoptions</code>选项，分别打开，添加<code>-Dfile.encoding=UTF-8</code>后，重启IDEA.</p>
-<p>完成上面两步后，再次启动Tomcat服务，你会发现日志已经正常。</p>
-<blockquote>
-<p>注：如果依然发现乱码，则可能是IDEA缓存了当前项目的编码设置，你可以在当前项目的.idea文件夹中找到encoding.xml文件，删除所有不是UTF-8的编码设置，重启IDEA即可。</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhangyuying.cn/2019/05/14/%E6%8A%80%E6%9C%AF/%E5%AD%97%E7%AC%A6%E9%9B%86%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/%E5%AD%97%E7%AC%A6%E9%9B%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张玉莹">
-      <meta itemprop="description" content="路漫漫其修远兮 吾将上下而求索">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张玉莹的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/05/14/%E6%8A%80%E6%9C%AF/%E5%AD%97%E7%AC%A6%E9%9B%86%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/%E5%AD%97%E7%AC%A6%E9%9B%86/" class="post-title-link" itemprop="url">字符集</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-05-14 09:28:33" itemprop="dateCreated datePublished" datetime="2019-05-14T09:28:33+08:00">2019-05-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>字符(<code>Character</code>)：各种文字和符号的总称，包括各国家文字、标点符号、图形符号、数字等</p>
-<p>字符集(<code>Character set</code>)：多个字符的集合</p>
-<ul>
-<li><p>字符集种类较多，每个字符集包含的字符个数不同，常见字符集名称：</p>
-<p><code>ASCII</code>字符集、<code>GB2312</code>字符集、<code>BIG5</code>字符集、<code> GB18030</code>字符集、<code>Unicode</code>字符集等 </p>
-</li>
-<li><p>计算机要准确的处理各种字符集文字，就需要进行<strong>字符编码</strong>，以便计算机能够识别和存储各种文字。</p>
-<blockquote>
-<p>编码：众所周知，计算机存储都是0和1，那计算机是如何区分开汉字，字母呢？后来人们就规定了一个编码表，这个表就相当于一个<strong>字典</strong>,比如我们通俗约定1100001就表示<code>A</code>,1100002表示<code>B</code>做计算机显示的时候，发现一个字符对象存储的值是<code>1100001</code>那就显示<code>A</code>就行了。像这样，<em>由信息的一种形式转换为另外一种形式的过程，称为编码。</em>而编码表便是编码过程的一种规则。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><p>​    ——<code>American  Standard  Codefor  Information  Interchange</code></p>
-<p><code>ASCII</code> 这部标准本身就直接规定了字符和字符编码的方式，所以既是字符集又是编码方案</p>
-<p>是最出名也是最基本的编码表，最开始计算机发明的时候，计算机的使用一般都是一些特殊字符加上<code>26</code>个字母，因此美国人定制了<code>ASCII</code>表用来显示通用的<code>26</code>个字符加上一些特殊字母，<code>ASCII</code>码只占用一个1字节。</p>
-<h3 id="ANSI"><a href="#ANSI" class="headerlink" title="ANSI"></a>ANSI</h3><p>最开始<code>ASCII</code>编码是够用的，但是随着计算机的发展，越来越多的国家陆续用上了计算机，这个时候，母语非英语的国家就开始不满意了，<code>ASCII</code>只能表示<code>26</code>个英文字母，那法语（é），汉语（中国），德语（Ä ä）等也要在计算机中表示，于是最开始，每个国家都自己定义了一套关于自己的编码规则，其中比较出名的有：</p>
-<ul>
-<li><p>西欧 <code>ISO 8859-1</code></p>
-</li>
-<li><p>台湾同胞的繁体 <code>Big 5</code></p>
-</li>
-<li><p>日本 <code>Shift_ JIS</code></p>
-</li>
-<li><p>中国国标 <code>GB 2312</code>（<code>GB18030</code>和<code>GBK</code>编码标准兼容<code>GB2312</code>）</p>
-<p><code>GB2312</code>只是一个区位码形式的字符集标准，不过实际上基本都用 <code>EUC-CN</code> 来编码，所以提及「<code>GB 2312</code>」时也说的是一个字符集和编码连锁的方案。<code>GBK</code> 和 <code>GB 18030</code> 等向后兼容于 <code>GB 2312</code> 的方案也类似。</p>
-</li>
-</ul>
-<p>这些编码都是在原有的<code>ASCII</code>基础上扩展而来，统称为<code>ANSI</code>编码。但是最大的缺点就是<strong>互不兼容</strong>，也就是每个编码都是在没有考虑其他国家的定义的基础上扩展的。一边来说，在解码/编码过程中，都是指定具体的编码，比如<code>GBK2312</code>，<code>ISO 8859-1</code> 等，<strong>ANSI</strong>只是对上述编码的一种统称。使用<strong>ANSI</strong>来作为一种编码格式的一般只见于<code>Windows</code>自带的记事本中。而在<code>Windows</code>记事本中，不同语言的操作系统，记事本所指的<strong>ANSI</strong>是不同的，</p>
-<ul>
-<li>简体中文 <code>GBK</code></li>
-<li>日文 <code>Shift_JIS</code></li>
-<li>繁体中文<code>Big 5</code></li>
-<li>…</li>
-</ul>
-<p>因此，对于<code>Windows</code>的记事本，<strong>ANSI</strong>需要看具体的编码。</p>
-<h3 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h3><p><strong>Unicode字符集和编码是明确区分的</strong>（<code>ANSI</code>类的字符集合编码都是一对一的关系，一种字符集对应一种编码。）</p>
-<p><code>Unicode/UCS</code> 标准首先是个统一的字符集标准。<code>Unicode</code>统一了各个国家的字符并规定了每个符号的编码，在<code>Unicode</code><strong>字符集</strong>中，每个字符占用两个字节表示。</p>
-<p>而 <code>Unicode/UCS</code> 标准同时也定义了几种可选的<strong>编码方案</strong>，在标准文档中称作「<code>encoding form</code>」，主要包括 <code>UTF-8</code>、<code>UTF-16</code> 和 <code>UTF-32</code>。所以，对 <code>Unicode </code>方案来说，同样的基于 <code>Unicode</code> 字符集的文本可以用多种编码来存储、传输。所以，用「<code>Unicode</code>」来称呼一个编码方案不合适，并且误导。</p>
-<ul>
-<li><p><code>UTF-8</code></p>
-<p>​    ——<code>8-bit Unicode Transformation Format</code></p>
-<p>前面说得到，<code>Unicode</code>字符集是以2个字节表示一个字符，但是在有时候只需要<code>ASCII</code>编码即可完整表示所有内容的系统中，使用<code>Unicode</code>会浪费比较多的控件，因此出现了<code>UTF-8</code>编码，<code>UTF-8</code>是一种变长编码。UTF-8在编码<code>Unicode</code>码的时候，会将小位数的字符进行压缩，因此使用<code>UTF-8</code>的表示一个字母的时候，依然只使用一个字节。<code>UTF-8</code>对常用的字符一般3个字节即可表示，最多6个字节。（尽管如此，2003年11月<code>UTF-8</code>被<code>RFC 3629</code>重新规范，只能使用原来<code>Unicode</code>定义的区域，<code>U+0000</code>到<code>U+10FFFF</code>，也就是说最多四个字节：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/UTF-8">维基百科</a>）</p>
-<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/55140986/answer/142938758">utf-8没有字节序的原因</a></p>
-</li>
-<li><p><code>UTF-16</code></p>
-<p><code>UTF-16</code>使用16位作为一个字长单位，使用<code>UTF-16</code>要么是两个字节表示一个字符，要么是4个字节。不过值得注意的是不同的操作系统读取直接的顺序不同，就好像古人写字是从右往左写一样，这里顺序，称为<strong>字节序</strong>，比如1122，有些系统读出来是1122，而有些系统读出来是2211，所以<code>UTF-16</code>又分大端（<strong>utf16-big endian</strong>）和小端（<strong>utf16-little endian</strong>）表示。</p>
-</li>
-<li><p><code>UTF-32</code></p>
-<p><code>UTF-32</code> 将每一个 <code>Unicode</code> 代码点表示为相同值的 32 位整数</p>
-</li>
-</ul>
-<h3 id="URLEncoding"><a href="#URLEncoding" class="headerlink" title="URLEncoding"></a>URLEncoding</h3><p><code>URLEncoding</code>又称为<strong>百分号编码</strong>,其主要作用在于解决在<strong>使用url中混合其他编码的时候所带来的语法冲突</strong>，比如<code>?</code>在URL中，表示参数分割，但是如果想要在参数中传递<code>？</code>就必须通过特殊的转换，而<code>URLEncoding</code>则正是用来将这些特殊符号转换为其他不会有歧义的统一编码。</p>
-<p>其主要编码原理在于：将需要转码的字符转为16进制，然后从右到左，取4位(不足4位直接处理)，每2位做一位，前面加上%，编码成%XY格式</p>
-<p>部分特殊字符转换规则如下：</p>
-<table>
-<thead>
-<tr>
-<th>空格</th>
-<th>!</th>
-<th>#</th>
-<th>$</th>
-<th>%</th>
-<th>+</th>
-<th>@</th>
-<th>:</th>
-<th>=</th>
-<th>?</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>%20</td>
-<td>%21</td>
-<td>%23</td>
-<td>%24</td>
-<td>%25</td>
-<td>%2B</td>
-<td>%40</td>
-<td>%3A</td>
-<td>%3D</td>
-<td>%3F</td>
-</tr>
-</tbody></table>
-<p>一般当参数会混合在URL中，都会先将参数进行URL编码再进行传递。比如<strong>Get</strong>请求或者Http中MIME类型为<code>application/x-www-form-urlencoded</code>的请求</p>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/20650946/answer/15745831">https://www.zhihu.com/question/20650946/answer/15745831</a></p>
-<p><a target="_blank" rel="noopener" href="http://dengchengchao.com/?p=793">http://dengchengchao.com/?p=793</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/14/%E6%8A%80%E6%9C%AF/%E5%AD%97%E7%AC%A6%E9%9B%86%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/JAVA%E4%B8%AD%E7%9A%84%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1466,20 +1076,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

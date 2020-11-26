@@ -20,16 +20,16 @@
     var CONFIG = {"hostname":"zhangyuying.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="建议首先阅读Java 8 函数式接口归纳  流式编程作为Java 8的亮点之一，是继Java 5之后对集合的再一次升级，可以说Java 8几大特性中，Streams API 是作为Java 函数式的主角来设计的,夸张的说，有了Streams API之后，万物皆可一行代码。   什么是StreamStream被翻译为流，它的工作过程像将一瓶水导入有很多过滤阀的管道一样，水每经过一个过滤阀，便被操作">
+  <meta name="description" content="建议首先阅读Java 8 函数式接口归纳  流式编程作为Java 8的亮点之一，是继Java 5之后对集合的再一次升级，可以说Java 8几大特性中，Streams API 是作为Java 函数式的主角来设计的,夸张的说，有了Streams API之后，万物皆可一行代码。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java8 Streams API">
 <meta property="og:url" content="http://zhangyuying.cn/2019/11/06/%E6%8A%80%E6%9C%AF/java8%E6%96%B0%E7%89%B9%E6%80%A7/Java8-Streams-API/index.html">
 <meta property="og:site_name" content="张玉莹的个人博客">
-<meta property="og:description" content="建议首先阅读Java 8 函数式接口归纳  流式编程作为Java 8的亮点之一，是继Java 5之后对集合的再一次升级，可以说Java 8几大特性中，Streams API 是作为Java 函数式的主角来设计的,夸张的说，有了Streams API之后，万物皆可一行代码。   什么是StreamStream被翻译为流，它的工作过程像将一瓶水导入有很多过滤阀的管道一样，水每经过一个过滤阀，便被操作">
+<meta property="og:description" content="建议首先阅读Java 8 函数式接口归纳  流式编程作为Java 8的亮点之一，是继Java 5之后对集合的再一次升级，可以说Java 8几大特性中，Streams API 是作为Java 函数式的主角来设计的,夸张的说，有了Streams API之后，万物皆可一行代码。">
 <meta property="og:locale">
 <meta property="og:image" content="https://raw.githubusercontent.com/zhangyuying-cn/images/master/%E6%8A%80%E6%9C%AF/java8%E6%96%B0%E7%89%B9%E6%80%A7/stream.png">
 <meta property="article:published_time" content="2019-11-06T09:38:07.000Z">
-<meta property="article:modified_time" content="2020-11-19T03:43:01.222Z">
+<meta property="article:modified_time" content="2020-11-26T03:38:03.128Z">
 <meta property="article:author" content="张玉莹">
 <meta property="article:tag" content="java8">
 <meta name="twitter:card" content="summary">
@@ -236,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:38:03" itemprop="dateModified" datetime="2020-11-26T11:38:03+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,7 +263,7 @@
 <p>建议首先阅读<a href="http://zhangyuying.cn/2019/11/06/%E6%8A%80%E6%9C%AF/java8%E6%96%B0%E7%89%B9%E6%80%A7/Java8-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E5%BD%92%E7%BA%B3/">Java 8 函数式接口归纳</a></p>
 </blockquote>
 <p>流式编程作为Java 8的亮点之一，是继<code>Java 5</code>之后对集合的再一次升级，可以说<code>Java 8</code>几大特性中，<code>Streams API</code> 是作为Java 函数式的主角来设计的,夸张的说，有了<code>Streams API</code>之后，万物皆可一行代码。</p>
-<!---more-->
+<a id="more"></a>
 
 <h3 id="什么是Stream"><a href="#什么是Stream" class="headerlink" title="什么是Stream"></a>什么是Stream</h3><p><code>Stream</code>被翻译为流，它的工作过程像将一瓶水导入有很多过滤阀的管道一样，水每经过一个过滤阀，便被操作一次，比如过滤，转换等，最后管道的另外一头有一个容器负责接收剩下的水。</p>
 <p>示意图如下：</p>
@@ -684,20 +684,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

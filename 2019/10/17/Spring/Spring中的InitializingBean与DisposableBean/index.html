@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"zhangyuying.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="InitializingBeanInitializingBean 接口为bean提供了初始化方法的方式，它只包括afterPropertiesSet方法， 凡是继承该接口的类，在初始化bean的时候都会执行afterPropertiesSet方法。afterPropertiesSet执行的时间点是所有的properties被注入后 12345package org.springframework.">
+  <meta name="description" content="InitializingBeanInitializingBean 接口为bean提供了初始化方法的方式，它只包括afterPropertiesSet方法， 凡是继承该接口的类，在初始化bean的时候都会执行afterPropertiesSet方法。afterPropertiesSet执行的时间点是所有的properties被注入后">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring中的InitializingBean与DisposableBean">
 <meta property="og:url" content="http://zhangyuying.cn/2019/10/17/Spring/Spring%E4%B8%AD%E7%9A%84InitializingBean%E4%B8%8EDisposableBean/index.html">
 <meta property="og:site_name" content="张玉莹的个人博客">
-<meta property="og:description" content="InitializingBeanInitializingBean 接口为bean提供了初始化方法的方式，它只包括afterPropertiesSet方法， 凡是继承该接口的类，在初始化bean的时候都会执行afterPropertiesSet方法。afterPropertiesSet执行的时间点是所有的properties被注入后 12345package org.springframework.">
+<meta property="og:description" content="InitializingBeanInitializingBean 接口为bean提供了初始化方法的方式，它只包括afterPropertiesSet方法， 凡是继承该接口的类，在初始化bean的时候都会执行afterPropertiesSet方法。afterPropertiesSet执行的时间点是所有的properties被注入后">
 <meta property="og:locale">
 <meta property="article:published_time" content="2019-10-17T09:37:28.000Z">
-<meta property="article:modified_time" content="2020-11-19T03:43:01.215Z">
+<meta property="article:modified_time" content="2020-11-26T03:38:37.349Z">
 <meta property="article:author" content="张玉莹">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
@@ -234,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-11-26 11:38:37" itemprop="dateModified" datetime="2020-11-26T11:38:37+08:00">2020-11-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,6 +259,8 @@
       
         <h3 id="InitializingBean"><a href="#InitializingBean" class="headerlink" title="InitializingBean"></a><code>InitializingBean</code></h3><p><code>InitializingBean</code> 接口为bean提供了初始化方法的方式，它只包括<code>afterPropertiesSet</code>方法，</p>
 <p>凡是继承该接口的类，在初始化bean的时候都会执行<code>afterPropertiesSet</code>方法。<code>afterPropertiesSet</code>执行的时间点是所有的<code>properties</code>被注入后</p>
+<a id="more"></a>
+
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.springframework.beans.factory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">InitializingBean</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">afterPropertiesSet</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>使用示例：</p>
@@ -403,20 +405,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
