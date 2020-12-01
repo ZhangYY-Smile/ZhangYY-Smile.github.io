@@ -12411,10 +12411,8 @@
   <entry>
     <title>logback-spring.xml</title>
     <url>/2020/11/29/%E6%97%A5%E5%BF%97/logback-spring-xml/</url>
-    <content><![CDATA[<p>logback和logback-spring.xml都可以用来配置logback。</p>
+    <content><![CDATA[<p>logback和logback-spring.xml都可以用来配置logback。logback-spring.xml中日志输出的配置和logback.xml语法相同(<a href="https://zhangyuying.top/2020/11/22/%E6%97%A5%E5%BF%97/logback%E5%9F%BA%E7%A1%80/#more">logbook基础配置</a>)，但是有两点不同，现在项目多用logback-spring.xml</p>
 <a id="more"></a>
-
-<p>logback-spring.xml中日志输出的配置和logback.xml语法相同(<a href="https://zhangyuying.top/2020/11/22/%E6%97%A5%E5%BF%97/logback%E5%9F%BA%E7%A1%80/#more">logbook基础配置</a>)，但是有两点不同，现在项目多用logback-spring.xml</p>
 <blockquote>
 <p>springboot推荐使用logback-spring.xml而不是logback.xml</p>
 </blockquote>
