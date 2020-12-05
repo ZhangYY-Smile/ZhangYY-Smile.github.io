@@ -12556,7 +12556,7 @@
 <h4 id="Dubbo理解"><a href="#Dubbo理解" class="headerlink" title="Dubbo理解"></a>Dubbo理解</h4><p>Dubbo是基于 Java 的高性能、轻量级的开源 RPC分布式服务框架，致力于提供高性能和透明化的RPC远程服务调用方案，以及SOA服务治理方案。</p>
 <p>个人理解：</p>
 <ol>
-<li>首先，Dubbo的本身就是基于Java的RPC框架，主要实现思想还是RPC[点我了解RPC]，所以Dobbo最近的功能就是面向接口的远程方法调用</li>
+<li>首先，Dubbo的本身就是基于Java的RPC框架，主要实现思想还是RPC<a href="https://zhangyuying.top/2020/11/29/%E5%BE%AE%E6%9C%8D%E5%8A%A1/RPC/#more">点我了解RPC</a>，所以Dobbo最近的功能就是面向接口的远程方法调用</li>
 <li>其次，Dubbo对RPC的部分思想在实现方式上进行了增强，比如对于RPC中客户端和服务端的互联，Dubbo提供点对点直连，也增加了服务的自动注册和发现</li>
 <li>最后，Dubbo在高效的实现RPC的基础上实现了许多其他分布式框架需要的特性：比如智能容错和负载均衡</li>
 </ol>
