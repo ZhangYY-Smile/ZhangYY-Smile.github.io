@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"zhangyuying.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="架构? 系统 子系统？ 模块和组件？">
+  <meta name="description" content="架构中的一些其他有关系而又相似的概念，理解了这些概念更有助于我们理解架构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="架构相关基础概念">
 <meta property="og:url" content="http://zhangyuying.cn/2020/06/16/%E6%9E%B6%E6%9E%84/%E6%9E%B6%E6%9E%84%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="张玉莹的个人博客">
-<meta property="og:description" content="架构? 系统 子系统？ 模块和组件？">
+<meta property="og:description" content="架构中的一些其他有关系而又相似的概念，理解了这些概念更有助于我们理解架构">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-06-16T01:33:35.000Z">
-<meta property="article:modified_time" content="2020-11-19T03:43:01.225Z">
+<meta property="article:modified_time" content="2020-12-09T02:53:39.527Z">
 <meta property="article:author" content="张玉莹">
 <meta property="article:tag" content="架构">
 <meta name="twitter:card" content="summary">
@@ -234,8 +234,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+                <time title="Modified: 2020-12-09 10:53:39" itemprop="dateModified" datetime="2020-12-09T10:53:39+08:00">2020-12-09</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9E%B6%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">架构</span></a>
+                </span>
+            </span>
 
           
 
@@ -248,9 +257,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>架构?</p>
-<p>系统 子系统？</p>
-<p>模块和组件？</p>
+        <p>架构中的一些其他有关系而又相似的概念，理解了这些概念更有助于我们理解架构</p>
+<a id="more"></a>
+
+<h4 id="系统和子系统"><a href="#系统和子系统" class="headerlink" title="系统和子系统"></a>系统和子系统</h4><p><strong>系统</strong>（<code>system</code>）:泛指由一群<strong>有关联</strong>的个体组成，根据<strong>某种规则</strong>运作，能完成个别元件不能单独完成的工作的群体。它的意思是“总体”、“整体”或“联盟”。</p>
+<ul>
+<li><p><strong>关联</strong>：系统是由一群有关联的个体组成的，没有关联的个体堆在一起不能成为一个系统，例如：把一个发动机和一台PC放在一起不能称之为一个系统，把发动机、底盘、轮胎、车架组合起来才能成为一台汽车。</p>
+</li>
+<li><p><strong>规则</strong>：系统内的个体需要按照指定的规则运作，而不是单个个体各自为政。规则规定了系统内个体分工和协作的方式。例如：汽车发动机负责产生动力，然后通过变速器和传动轴，将动力输出到轮胎上，从而驱动汽车前进。</p>
+</li>
+<li><p><strong>能力</strong>：系统能力和个体能力有本质的差别，系统能力也不是个体能力之和，而是产生了新的能力。例如：汽车能够载重前进，而发动机、变速器、传动轴、车轮本身都不具备这样的能力。</p>
+</li>
+</ul>
+<p><strong>子系统</strong>也是由一群有关联的个体所组成的系统，多半会是更大系统中的一部分。</p>
+<ul>
+<li>其实子系统和系统的定义是一样的，<strong>只是观察的角度有差异</strong>，一个系统可能是另外一个更大系统的子系统。比如微信是一个系统，朋友圈就是一个子系统，朋友圈系统又包含评论子系统</li>
+</ul>
+<h4 id="模块和组件"><a href="#模块和组件" class="headerlink" title="模块和组件"></a>模块和组件</h4><p>模块（Module）：是一套一致而互相有紧密关连的软件组织。它分别包含了程序和数据结构两部分。<br>组件（Component）：自包含的、可编程的、可重用的、与语言无关的软件单元，软件组件可以很容易被用于组装应用程序中。</p>
+<ul>
+<li><p>模块和组件都是系统的组成部分，只是从不同的角度拆分系统而已。</p>
+<ul>
+<li><p>从逻辑的角度来拆分系统后，得到的单元就是“模块”；划分模块的<strong>主要目的是职责分离</strong>；模块偏业务。</p>
+</li>
+<li><p>从物理的角度来拆分系统后，得到的单元就是“组件”；划分组件的<strong>主要目的是单元复用</strong>；组件偏技术。</p>
+</li>
+</ul>
+</li>
+<li><p>模块是对系统进行横向拆分，为了便于分工协作；而组件是纵向切分，站在成本角度，目的是为了复用，具备独立可替换特点。</p>
+</li>
+</ul>
+<h4 id="框架和架构"><a href="#框架和架构" class="headerlink" title="框架和架构"></a>框架和架构</h4><p><strong>单纯从定义的角度来看，框架关注的是“规范”，架构关注的是“结构”</strong>。</p>
+<p>我们经常会说，比如：“工程采用的是MVC架构”、“工程使用的是SSH框架”等。所以，第一句话是站在结构的层面来说明(如果是以不同的角度来说明结构，会得出不同的架构描述(五视图))，第二句话是站在规范的层面来说明。</p>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/312af3e8b94a">浅谈架构-架构的缘起和缘落</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/29a015e3bcf7">什么是架构</a></p>
 
     </div>
 
@@ -334,6 +374,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">系统和子系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%92%8C%E7%BB%84%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">模块和组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6%E5%92%8C%E6%9E%B6%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">框架和架构</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -349,14 +390,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">157</span>
+          <span class="site-state-item-count">158</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
