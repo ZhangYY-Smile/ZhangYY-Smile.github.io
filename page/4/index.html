@@ -200,6 +200,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="">
+    <link itemprop="mainEntityOfPage" href="http://zhangyuying.cn/2019/11/05/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Java-synchronized/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张玉莹">
+      <meta itemprop="description" content="路漫漫其修远兮 吾将上下而求索">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张玉莹的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/05/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Java-synchronized/" class="post-title-link" itemprop="url">Java synchronized</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-05 20:33:35" itemprop="dateCreated datePublished" datetime="2019-11-05T20:33:35+08:00">2019-11-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">多线程</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在Java中提到多线程同步，那一定会想到synchronized，这边文章我们就来了解一下synchronized的实现原理及其在JDK1.6以后的优化。</p>
+<p>学习之前需要了解线程的生命周期，可参照<a href="http://zhangyuying.cn/2019/11/02/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Java%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/">Java中的多线程</a>，其中有线程生命周期的介绍</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/05/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Java-synchronized/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="">
     <link itemprop="mainEntityOfPage" href="http://zhangyuying.cn/2019/11/02/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Java%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -929,87 +1011,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhangyuying.cn/2019/08/19/nginx/nginx%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90web%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张玉莹">
-      <meta itemprop="description" content="路漫漫其修远兮 吾将上下而求索">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张玉莹的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/08/19/nginx/nginx%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90web%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-title-link" itemprop="url">Nginx搭建静态资源web服务器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-08-19 11:31:53" itemprop="dateCreated datePublished" datetime="2019-08-19T11:31:53+08:00">2019-08-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-19 11:43:01" itemprop="dateModified" datetime="2020-11-19T11:43:01+08:00">2020-11-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Nginx的一个功能就是做静态资源web服务器</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/08/19/nginx/nginx%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90web%E6%9C%8D%E5%8A%A1%E5%99%A8/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1081,7 +1082,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">158</span>
+          <span class="site-state-item-count">159</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
